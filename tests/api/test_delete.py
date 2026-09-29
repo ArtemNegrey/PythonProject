@@ -1,0 +1,5 @@
+def test_delete_user(api_session):
+    response = api_session.delete('https://reqres.in/api/users/2')
+
+    assert response.status_code == 204
+    assert response.text == ""
